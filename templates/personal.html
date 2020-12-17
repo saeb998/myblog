@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content%}
+<h4 class="border-bottom text-center mt-5">{{ name }}</h4>
+<div class="col-md-8">
+    <div class="card card-body bg-light">
+        <h4 class="card-header">{{title}}</h4>
+        <div class="card-body">     
+            <p class="alert alert-info"><b>Name: </b>{{name}}</p>
+
+               <p class="alert alert-info"><b>Description: </b>{{disc}}</p>
+               <div class="alert alert-info"><b>Age: </b>{{age}}</div>
+               <div class="alert alert-info">
+                <h5 class="border-bottom">Social Media links</h5>
+                {% for link in social_links%}
+                <a href="{{link.url}}" class="btn btn-primary">{{link.site}}</a>
+                {% endfor %}
+            </div>
+                <div class="alert alert-info" role="alert">
+                    <strong>My Email: </strong>
+                    <a href="https://{{email}}" class="btn btn-outline-success">My Email</a>
+                </div>
+
+
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock content%} mt-5
